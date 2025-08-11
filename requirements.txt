@@ -1,0 +1,16 @@
+flask
+flask-cors
+numpy
+polars==0.17.12
+tqdm
+python-dotenv
+pyarrow
+PyJWT
+requests
+apscheduler
+python-dateutil
+XlsxWriter
+deepdiff
+psycopg2-binary
+Flask-SQLAlchemy
+Flask-Migrate

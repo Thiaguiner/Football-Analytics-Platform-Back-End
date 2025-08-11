@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from tabela.route import tabela_bp
 
 app = Flask(__name__)
-CORS(app)  # Libera acesso de outros domínios (como o Angular)
+
+app.register_blueprint(tabela_bp)
 
 
 @app.route("/api/hello", methods=["GET"])
