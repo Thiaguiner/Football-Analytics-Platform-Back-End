@@ -13,3 +13,8 @@ class Controller:
         print(content)
         
         return app.response_class(response=json.dumps(content),status=200,mimetype="application/json")
+    
+    def info(self, time):
+        content = Model().info_time(time)
+        
+        return app.response_class(response=json.dumps(content), status=200, mimetype="application/json")
