@@ -18,3 +18,8 @@ class Controller:
         content = Model().info_time(time)
         
         return app.response_class(response=json.dumps(content), status=200, mimetype="application/json")
+    
+    def confrontos_controller(self, time1, time2):
+        content = Model().confrontos(time1, time2)
+        print(content)
+        return app.response_class(response=json.dumps(content), status=200, mimetype="application/json")

@@ -17,4 +17,12 @@ def infoTimes():
     time = request.args.get("time", default='Flamengo', type=str)
     print("time", time)
     return Controller().info(time)
+
+@routes.route('/api/confrontos', methods=['GET'])
+def confrontos():
+    time1 = request.args.get("time1", default='', type=str)
+    time2 = request.args.get("time2", default='', type=str)
+    print("time1", time1)
+    print("time2", time2)
+    return Controller().confrontos_controller(time1, time2)
     
